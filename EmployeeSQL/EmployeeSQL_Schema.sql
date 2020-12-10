@@ -46,3 +46,11 @@ Employees.emp_no=Salaries.emp_no;
 SELECT first_name, last_name, hire_date
 FROM Employees
 WHERE hire_date BETWEEN '1986-01-01' AND '1986-12-31';
+
+SELECT Departments.dept_no, Departments.dept_name, Dept_Manager.emp_no,
+Employees.last_name
+FROM Departments
+INNER JOIN Dept_Manager ON
+Departments.dept_no=Dept_Manager.dept_no
+INNER JOIN Employees ON
+Employees.emp_no=Dept_Manager.emp_no;
