@@ -54,3 +54,11 @@ INNER JOIN Dept_Manager ON
 Departments.dept_no=Dept_Manager.dept_no
 INNER JOIN Employees ON
 Employees.emp_no=Dept_Manager.emp_no;
+
+SELECT Dept_Emp.emp_no, Employees.last_name, Employees.first_name, 
+Departments.dept_name
+FROM Dept_Emp
+INNER JOIN Departments ON
+Dept_Emp.dept_no=Departments.dept_no
+INNER JOIN Employees ON
+Dept_Emp.emp_no=Employees.emp_no;
