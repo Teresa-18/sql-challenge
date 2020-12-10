@@ -92,3 +92,13 @@ WHERE Departments.dept_name IN(
 	SELECT dept_name
 	FROM Departments
 	WHERE dept_name = 'Development');
+	
+SELECT last_name, COUNT(last_name) AS "Last Name"
+FROM Employees
+GROUP BY last_name
+ORDER BY "Last Name" DESC;
+
+SELECT COUNT(last_name) AS "Last Name"
+FROM Employees
+GROUP BY last_name
+ORDER BY "Last Name" DESC;
