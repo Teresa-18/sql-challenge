@@ -22,6 +22,7 @@ CREATE TABLE SALARIES(EMP_NO INT, SALARY INT,
 FOREIGN KEY (EMP_NO) REFERENCES EMPLOYEES(EMP_NO),
 PRIMARY KEY(EMP_NO,SALARY));
 
+
 SELECT *
 FROM DEPARTMENTS
 SELECT *
@@ -34,3 +35,14 @@ SELECT *
 FROM DEPT_MANAGER
 SELECT *
 FROM SALARIES
+
+
+SELECT Employees.emp_no, Employees.last_name, Employees.first_name, 
+Employees.sex, Salaries.salary
+FROM Salaries
+INNER JOIN Employees ON
+Employees.emp_no=Salaries.emp_no;
+
+SELECT first_name, last_name, hire_date
+FROM Employees
+WHERE hire_date BETWEEN '1986-01-01' AND '1986-12-31';
